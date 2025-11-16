@@ -6,6 +6,7 @@ button_t button;
 
 static void on_push_button(button_t *btn) {
     // what should happen when you push a button?
+    // I don't know
 }
 
 void setup() {

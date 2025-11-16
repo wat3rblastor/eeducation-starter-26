@@ -21,6 +21,9 @@ static void __encoder_isr_btn(void* ctx) {
 void encoder_init(encoder_t* enc, pin_t pin_a, pin_t pin_b, pin_t pin_btn) {
     // Initialize the encoder struct by giving it reasonable values
     // And initialize the hardware if needed
+    enc->pin_a = pin_a;
+    enc->pin_b = pin_b; 
+    enc->pin_btn = pin_btn;
 }
 
 void encoder_set_spin_callback(encoder_t* enc, void (*cb)(encoder_t* enc, int32_t delta)) {
